@@ -32,6 +32,7 @@ portfolio-btn Roboto Weight 500
   --secondary-background-color: #f5f4fa;
   --background-color-add: #2f303a;
   --project-card-gap: 30px;
+  --social-link-color: #afb1b8;
 }
 
 body {
@@ -145,12 +146,28 @@ img {
   margin-left: auto;
 }
 
+.icon-envelope {
+  margin-right: 10px;
+  width: 16px;
+  height: 12px;
+  fill: currentColor;
+}
+
+.icon-smartphone {
+  margin-right: 10px;
+  width: 10px;
+  height: 16px;
+  fill: currentColor;
+}
+
 .auth-nav-item:not(:first-child) {
   margin-left: 50px;
 }
 
 .auth-nav-link {
   color: var(--text-color-add);
+  display: inline-flex;
+  align-items: center;
 }
 
 .auth-nav-link:hover,
@@ -160,7 +177,16 @@ img {
 /* body */
 /* Hero section */
 .hero {
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/background-hero.jpg');
   background-color: var(--background-color-add);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -204,6 +230,19 @@ img {
 
 .particular {
   padding-bottom: 0;
+}
+.icon-block {
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-background-color);
+}
+.icon-particular {
+  width: 70px;
+  height: 70px;
 }
 .particular-list {
   display: flex;
@@ -261,11 +300,12 @@ img {
 
 .command-card {
   background-color: var(--primary-white-color);
-  border-radius: 0px 0px 4px 4px;
+  border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   text-align: center;
   margin-right: 30px;
+  overflow: hidden;
 }
 
 .command-card:last-child {
@@ -283,12 +323,110 @@ img {
   color: var(--text-color);
   margin-bottom: 10px;
 }
+
 .command-text {
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
   color: var(--text-color-add);
 }
+.social-item {
+  display: flex;
+  justify-content: center;
+}
 
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+  color: var(--social-link-color);
+}
+
+.social-link-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+}
+
+.icon-social {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Client-section */
+.client-list {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.client-item {
+  width: 170px;
+  height: 92px;
+
+  margin-right: 30px;
+}
+
+.client-item:last-child {
+  margin-right: 0;
+}
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--social-link-color);
+  border-radius: 4px;
+  color: var(--social-link-color);
+}
+
+.icon-client {
+  fill: currentColor;
+}
+.client-link:hover,
+.client-link:focus {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.icon-client.one {
+  height: 47px;
+  width: 41px;
+}
+
+.icon-client.two {
+  height: 52px;
+  width: 40px;
+}
+
+.icon-client.three {
+  height: 43px;
+  width: 41px;
+}
+
+.icon-client.four {
+  height: 41px;
+  width: 69px;
+}
+.icon-client.five {
+  height: 45px;
+  width: 63px;
+}
+
+.icon-client.six {
+  height: 44px;
+  width: 94px;
+}
 /* Footer */
 
 .footer {
@@ -296,7 +434,27 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-
+.footer-container {
+  display: flex;
+}
+.contacts {
+  margin-right: 70px;
+}
+.subscribe-tittle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
+.subscribe {
+  padding-top: 12px;
+}
+.subscribe-list {
+  display: flex;
+  margin-top: 20px;
+}
 .logo-footer {
   display: inline-block;
   margin-bottom: 20px;
@@ -325,7 +483,29 @@ img {
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
 }
+.subscribe-item:not(:last-child) {
+  margin-right: 10px;
+}
 
+.footer-icon-social {
+  height: 44px;
+  width: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--primary-white-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-icon-social:last-child {
+  margin-right: 0;
+}
+
+.footer-icon-social:hover,
+.footer-icon-social:focus {
+  background-color: var(--accent-color);
+}
 /* Portfolio */
 
 /* Filtr */
@@ -375,6 +555,17 @@ img {
   background-color: var(--primary-white-color);
   margin-left: var(--project-card-gap);
   margin-top: var(--project-card-gap);
+}
+.projects-card-link {
+  display: block;
+  width: 370px;
+  height: 404px;
+}
+
+.projects-card-link:hover,
+.projects-card-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .card-tittle {
